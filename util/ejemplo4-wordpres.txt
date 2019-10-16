@@ -1,0 +1,11 @@
+sudo mkdir -p /taller-docker/volumenes/wordpress
+
+sudo docker run -d --name mywordpress \
+    --volume=/taller-docker/volumenes/wordpress:/var/www/html \
+    -e WORDPRESS_DB_HOST=172.17.0.2 \
+    -e WORDPRESS_DB_USER=usrwordpress \
+    -e WORDPRESS_DB_PASSWORD=pswdwordpress \
+    -e WORDPRESS_DB_NAME=wordpressdb \
+    -p 80:80 \
+    wordpress
+

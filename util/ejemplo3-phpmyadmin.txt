@@ -1,0 +1,7 @@
+sudo mkdir -p /taller-docker/volumenes/phpmyadmin
+
+sudo docker run -d --name myphpadmin \
+    -p 80:80 \
+    -e PMA_HOST=172.17.0.2 \
+    --volume=/taller-docker/volumenes/phpmyadmin:/var/www/html \
+    phpmyadmin/phpmyadmin

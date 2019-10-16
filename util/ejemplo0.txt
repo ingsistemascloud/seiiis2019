@@ -1,0 +1,5 @@
+sudo docker run hello-world
+
+sudo docker images
+
+sudo docker container ps

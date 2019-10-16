@@ -1,0 +1,15 @@
+sudo mkdir -p /taller-docker/volumenes/mariadb
+
+sudo docker run -d --name mymariadb \
+    -p 3306:3306 \
+    --volume=/taller-docker/volumenes/mariadb:/var/lib/mysql \
+    -e MYSQL_ROOT_PASSWORD=R00tMySQL% \
+    -e MYSQL_DATABASE=wordpressdb \
+    -e MYSQL_USER=usrwordpress \
+    -e MYSQL_PASSWORD=pswdwordpress mariadb:10.3
+
+sudo docker images
+
+sudo docker container ps
+
+sudo ls /taller-docker/volumenes/mariadb/
