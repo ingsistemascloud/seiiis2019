@@ -4,4 +4,9 @@ sudo docker images
 
 sudo docker container ps
 
+sudo docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' mydb
+
+sudo docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' mybackend
+
+sudo docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' myfrontend
 
