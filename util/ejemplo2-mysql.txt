@@ -1,5 +1,3 @@
-sudo mkdir -p /taller-docker/volumenes/mariadb
-
 sudo docker run -d --name mymariadb \
     -p 3306:3306 \
     --volume=/taller-docker/volumenes/mariadb:/var/lib/mysql \
@@ -13,3 +11,11 @@ sudo docker images
 sudo docker container ps
 
 sudo ls /taller-docker/volumenes/mariadb/
+
+sudo docker exec -it mymariadb mysql -u root -p
+
+sudo docker inspect mymariadb
+
+sudo docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' mymariadb
+
+sudo docker inspect --format='{{json .Config}}'   mymariadb
