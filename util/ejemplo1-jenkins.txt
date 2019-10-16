@@ -1,0 +1,5 @@
+sudo docker run -d --name myjenkins -p 8080:8080 -p 50000:50000 jenkins/jenkins:lts
+
+sudo docker container ps
+
+sudo docker exec -it myjenkins cat /var/jenkins_home/secrets/initialAdminPassword
