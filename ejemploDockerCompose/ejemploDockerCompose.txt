@@ -1,0 +1,7 @@
+sudo docker-composer up -d 
+
+sudo docker images
+
+sudo docker container ps
+
+

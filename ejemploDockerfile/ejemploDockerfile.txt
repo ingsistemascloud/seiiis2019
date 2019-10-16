@@ -5,3 +5,7 @@ sudo docker build -t mytomcat .
 sudo docker images
 
 sudo docker run -d --name mytomcatapp -p 8080:8080 mytomcat
+
+sudo docker build -t yourdockerhubUser/mytomcat:0.0.1 .
+
+sudo docker build -t yourdockerhubUser/mytomcat .
