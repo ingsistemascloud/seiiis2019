@@ -2,5 +2,5 @@ sudo docker run -it oraclelinux /bin/bash
 
 #dentro del docker
 uname -a
-/etc/oracle-release
+cat /etc/oracle-release
 cat /etc/redhat-release
